@@ -1,6 +1,3 @@
-# PyDFoam
-PyFoam on DeepFlame
-
 ## 1 Installed Utilities
 
 ### 1.1 Runner-Utilities
@@ -37,7 +34,7 @@ PyFoam on DeepFlame
 
 > These utilities are used for manipulating case date. They are especially useful in scripts that automatically set up simulation runs.
 
-#### 1.4.1 `pyFoamAddEmptyBoundary.py`
+#### 1.4.1 `pyFoamAddEmptyBoundary.py` (done)
 
 Adds an empty patch to the boundary file. Such a patch is needed for some mesh-manipulation utilities.
 
@@ -51,13 +48,13 @@ DeepFlame
 # /<case>/constant/polyMesh/boundary
 <patch>
 {
-	type wall;
 	nFaces 0;
 	startFace <str(lastFace)>
+	type wall;
 }
 ```
 
-#### 1.4.2 `pyFoamChangeBoundaryType.py`
+#### 1.4.2 `pyFoamChangeBoundaryType.py` (done)
 
 Changes the type of a boundary patch.
 
@@ -77,7 +74,7 @@ DeepFlame
 }
 ```
 
-#### 1.4.3 `pyFoamChangeBoundaryName.py`
+#### 1.4.3 `pyFoamChangeBoundaryName.py` (done)
 
 Changes the name of a boundary patch.
 
@@ -97,7 +94,7 @@ DeepFlame
 }
 ```
 
-#### 1.4.4 `pyFoamCreateBoundaryPatches.py`
+#### 1.4.4 `pyFoamCreateBoundaryPatches.py` 
 
 Creates boundary patches in a field-file by looking at the boundary-file.
 
@@ -168,6 +165,14 @@ Goes through a case and compresses single files that are bigger than a certain t
 ### 1.5 Manipulating dictionaries (from scripts)
 
 > For more complex cases these utilities require an understanding of the syntax/semantics of Python-lists and dictionaries
+
+#### 1.5.1 `pyFoamReadDictionary.py`
+
+Reads data from the root of a OpenFOAM-dictionary and prints it. To access subexpressions of a dictionary entry Python-expressions can be used (note: the expression is evaluated by the Python-interpreter, so quoting has to be used for strings, otherwise Python confuses them with variables)
+
+#### 1.5.2 `pyFoamWriteDictionary.py`
+
+Writes data to the root of a OpenFOAM-dictionary and writes it to disk. Subexpressions can be selected (see note: `pyFoamReadDictionary.py`)
 
 
 
