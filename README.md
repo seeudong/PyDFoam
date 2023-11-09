@@ -100,7 +100,7 @@ Creates boundary patches in a field-file by looking at the boundary-file.
 
 ？
 
-#### 4.4.5 `pyFoamClearCase.py`
+#### 1.4.5 `pyFoamClearCase.py`
 
 Removes all the timesteps except for the first from a case directory.
 
@@ -110,7 +110,7 @@ pyFoamClearCase.py <case>
 
 Todo: DeepFlame
 
-#### 4.4.6 `pyFoamPackCase.py`
+#### 1.4.6 `pyFoamPackCase.py`
 
 Packs the essential files (the ones that are needed to run it) of a case into a tar-file for archiving/mailing-purposes
 
@@ -120,7 +120,7 @@ pyFoamPackCase.py <case>
 
 Todo: + .yaml & Inference.py
 
-#### 4.4.7 `pyFoamCloneCase.py`
+#### 1.4.7 `pyFoamCloneCase.py`
 
 Creates a copy of a case with only the most essential files
 
@@ -130,7 +130,7 @@ pyFoamCloneCase.py <case> <newdirectory>
 
 Todo: + .yaml & Inference.py
 
-#### 4.4.8 `pyFoamCopyLastToFirst.py`
+#### 1.4.8 `pyFoamCopyLastToFirst.py`
 
 Copy last time-step from one case to the first one of another (making it the initial condition)
 
@@ -140,23 +140,23 @@ pyFoamCopyLastToFirst.py <sourcecase> <destinationcase>
 
 Todo: DeepFlame
 
-#### 4.4.9 `pyFoamClearInternalField.py`
+#### 1.4.9 `pyFoamClearInternalField.py`
 
 Clears the solution from the internal field
 
-#### 4.4.10 `pyFoamClearBoundaryValue.py`
+#### 1.4.10 `pyFoamClearBoundaryValue.py`
 
 Clear non-uniform values from the boundary-fields
 
-#### 4.4.11 `pyFoamInitVCS.py`
+#### 1.4.11 `pyFoamInitVCS.py`
 
 Initialize the case for the use with the Version Control System (VCS) of your choice
 
-#### 4.4.12 `pyFoamSymlinkToFile.py`
+#### 1.4.12 `pyFoamSymlinkToFile.py`
 
 This utility replaces a symlink with a copy of the file/directories it points to. To be used after a `pyFoamCloneCase.py` in `--symlink-mode`
 
-#### 4.4.13 `pyFoamCompressCases.py`
+#### 1.4.13 `pyFoamCompressCases.py`
 
 Goes through a case and compresses single files that are bigger than a certain threshold. Purpose is to shrink cases that were run with the setting `uncompressed` in the `controlDict`
 
